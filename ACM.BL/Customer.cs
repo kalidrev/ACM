@@ -66,35 +66,6 @@ namespace ACM.BL
 
         #region Methods
 
-        /// <summary>
-        /// Saves the current customer.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            //Code that saves the defined customer
-            return true;
-        }
-
-        /// <summary>
-        /// Retrieve one customer.
-        /// </summary>
-        /// <returns></returns>
-        public Customer Retrieve(int customerId)
-        {
-            // Code that retrieves the defined customer
-            return new Customer();
-        }
-
-        /// <summary>
-        /// Retrieve all customers
-        /// </summary>
-        /// <returns></returns>
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-
         public bool Validate()
         {
             bool isValid = true;

@@ -34,25 +34,6 @@ namespace ACM.BL
         #region Methods
 
         /// <summary>
-        /// Retrieve one order.
-        /// </summary>
-        public Order Retrieve(int orderId)
-        {
-            //code that retrieves the defined order
-            return new Order();
-        }
-
-        /// <summary>
-        /// Saves the current order.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            //Code that saves the order
-            return true;
-        }
-
-        /// <summary>
         /// Validates the order
         /// </summary>
         public bool Validate()
