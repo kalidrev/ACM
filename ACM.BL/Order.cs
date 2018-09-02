@@ -11,7 +11,7 @@ namespace ACM.BL
 
         #region Fields & Properties
 
-        public DateTimeOffset? orderDate { get; set; }
+        public DateTimeOffset? OrderDate { get; set; }
         public int OrderId { get; private set; }
 
 
@@ -57,7 +57,7 @@ namespace ACM.BL
         /// </summary>
         public bool Validate()
         {
-            return orderDate.HasValue;
+            return OrderDate.HasValue;
         }
 
         #endregion

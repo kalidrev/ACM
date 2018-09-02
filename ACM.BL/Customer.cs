@@ -23,7 +23,7 @@ namespace ACM.BL
 
         public string EmailAddress { get; set; }
 
-        public int CustomerID { get; private set; }
+        public int CustomerId { get; private set; }
 
         public string FullName
         {
@@ -59,7 +59,7 @@ namespace ACM.BL
 
         public Customer(int customerId)
         {
-            this.CustomerID = customerId;
+            this.CustomerId = customerId;
         }
 
         #endregion
