@@ -13,6 +13,10 @@ namespace ACM.BL
 
         public DateTimeOffset? OrderDate { get; set; }
         public int OrderId { get; private set; }
+        public IEnumerable<OrderItem> orderItems { get; set; }
+        public int CustomerId { get; set; }
+        public int ShippingAddressId { get; set; }
+
 
 
         #endregion

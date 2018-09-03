@@ -11,13 +11,16 @@ namespace ACM.BL
 
         #region Fields & Properties
 
-
+        private AddressRepository addressRepository { get; set; }
 
         #endregion
 
         #region Constructors & Destructors
 
-
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
 
         #endregion
 
@@ -27,7 +30,7 @@ namespace ACM.BL
         /// Saves the current customer.
         /// </summary>
         /// <returns></returns>
-        public bool Save()
+        public bool Save(Customer customer)
         {
             //Code that saves the defined customer
             return true;
@@ -39,7 +42,9 @@ namespace ACM.BL
         /// <returns></returns>
         public Customer Retrieve(int customerId)
         {
+            //Create the nistance of the Customer class
             Customer customer = new Customer(customerId);
+            customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
             
             // Code that retrieves the defined customer
 
@@ -58,7 +63,7 @@ namespace ACM.BL
         /// Retrieve all customers
         /// </summary>
         /// <returns></returns>
-        public List<Customer> Retrieve()
+        public IEnumerable<Customer> Retrieve()
         {
             return new List<Customer>();
         }
