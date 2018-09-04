@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Address
+    public class Address : EntityBase
     {
 
         #region Fields & Properties
@@ -38,7 +38,16 @@ namespace ACM.BL
 
         #region Methods
 
+        public override bool Validate()
+        {
+            var isValid = true;
 
+            isValid = String.IsNullOrWhiteSpace(StreetLine1)
+                && String.IsNullOrWhiteSpace(City)
+                && String.IsNullOrWhiteSpace(PostalCode);
+
+            return isValid;
+        }
 
         #endregion
 

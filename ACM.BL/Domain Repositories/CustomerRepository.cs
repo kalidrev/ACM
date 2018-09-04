@@ -32,8 +32,21 @@ namespace ACM.BL
         /// <returns></returns>
         public bool Save(Customer customer)
         {
-            //Code that saves the defined customer
-            return true;
+            var success = true;
+
+            if (customer.HasChanges && customer.IsValid)
+            {
+                if (customer.IsNew)
+                {
+                    //Call an Insert Sproc
+                }
+                else
+                {
+                    //call an update sproc
+                }
+            }
+
+            return success;
         }
 
         /// <summary>

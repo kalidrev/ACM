@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
+        private string _productName;
 
         #region Fields & Properties
 
         public Decimal? CurrentPrice { get; set; }
         public int ProductId { get; private set; }
         public string ProductDescription { get; set; }
-        public string ProductName { get; set; }
+        public string ProductName { get => _productName; set => _productName = value; }
 
         #endregion
 
@@ -44,7 +45,7 @@ namespace ACM.BL
         /// Validates the product data.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
@@ -53,6 +54,8 @@ namespace ACM.BL
 
             return isValid;
         }
+
+        
 
         #endregion
     }

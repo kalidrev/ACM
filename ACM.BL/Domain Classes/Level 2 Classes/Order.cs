@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
 
         #region Fields & Properties
@@ -45,7 +45,7 @@ namespace ACM.BL
         /// <summary>
         /// Validates the order
         /// </summary>
-        public bool Validate()
+        public override bool Validate()
         {
             return OrderDate.HasValue;
         }

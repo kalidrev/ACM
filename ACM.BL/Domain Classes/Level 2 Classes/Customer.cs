@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         #region Fields & Properties
 
@@ -77,7 +77,7 @@ namespace ACM.BL
             return FullName;
         }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 
@@ -86,6 +86,8 @@ namespace ACM.BL
 
             return isValid;
         }
+
+        
 
         #endregion
 

@@ -40,17 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="AddressRepository.cs" />
-    <Compile Include="CustomerRepository.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="OrderDisplay.cs" />
-    <Compile Include="OrderDisplayItem.cs" />
-    <Compile Include="OrderItem.cs" />
-    <Compile Include="OrderRepository.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductRepository.cs" />
+    <Compile Include="Domain Classes\Level 2 Classes\Address.cs" />
+    <Compile Include="Domain Repositories\AddressRepository.cs" />
+    <Compile Include="Domain Repositories\CustomerRepository.cs" />
+    <Compile Include="Domain Classes\Level 2 Classes\Order.cs" />
+    <Compile Include="Domain Classes\Level 2 Classes\Customer.cs" />
+    <Compile Include="Domain Classes\Level 2 Classes\OrderDisplay.cs" />
+    <Compile Include="Domain Classes\Level 2 Classes\OrderDisplayItem.cs" />
+    <Compile Include="Domain Classes\Level 2 Classes\OrderItem.cs" />
+    <Compile Include="Domain Repositories\OrderRepository.cs" />
+    <Compile Include="Domain Classes\Level 2 Classes\Product.cs" />
+    <Compile Include="Domain Repositories\ProductRepository.cs" />
+    <Compile Include="Domain Classes\Level 1 Classes\EntityBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
