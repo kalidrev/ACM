@@ -8,7 +8,7 @@ namespace ACM.BL
 {
     public class Customer
     {
-        #region Fields & Methods
+        #region Fields & Properties
 
         public int CustomerType { get; set; }
 
@@ -71,6 +71,11 @@ namespace ACM.BL
         #endregion
 
         #region Methods
+
+        public override string ToString()
+        {
+            return FullName;
+        }
 
         public bool Validate()
         {

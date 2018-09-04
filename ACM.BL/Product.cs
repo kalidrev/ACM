@@ -35,6 +35,11 @@ namespace ACM.BL
 
         #region Methods
 
+        public override string ToString()
+        {
+            return ProductName;
+        }
+
         /// <summary>
         /// Validates the product data.
         /// </summary>

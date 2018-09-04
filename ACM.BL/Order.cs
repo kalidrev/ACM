@@ -37,6 +37,11 @@ namespace ACM.BL
 
         #region Methods
 
+        public override string ToString()
+        {
+            return OrderDate.Value.Date + " (" + OrderId + ")";
+        }
+
         /// <summary>
         /// Validates the order
         /// </summary>
