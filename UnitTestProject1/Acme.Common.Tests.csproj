@@ -50,11 +50,16 @@
   <ItemGroup>
     <Compile Include="StringHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoggingServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ACM.BL\ACM.BL.csproj">
+      <Project>{4FB54BFD-80EF-400F-BC00-284CD835E00A}</Project>
+      <Name>ACM.BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Acme.Common\Acme.Common.csproj">
       <Project>{481500a7-70fe-47b0-b3ea-b44fa940544c}</Project>
       <Name>Acme.Common</Name>

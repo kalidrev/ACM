@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.Common.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Order : EntityBase
+    public class Order : EntityBase, ILoggable
     {
 
         #region Fields & Properties
@@ -48,6 +49,15 @@ namespace ACM.BL
         public override bool Validate()
         {
             return OrderDate.HasValue;
+        }
+
+        public string Log()
+        {
+            var logString = this.OrderId + ": " +
+                            "Date: " + this.OrderDate.Value.Date + " " +
+                            "Status: " + this.EntityState.ToString();
+
+            return logString;
         }
 
         #endregion

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.Common.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Customer : EntityBase
+    public class Customer : EntityBase, ILoggable
     {
         #region Fields & Properties
 
@@ -85,6 +86,16 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
             return isValid;
+        }
+
+        public string Log()
+        {
+            var logString = this.CustomerId + ": " +
+                            this.FullName + " " +
+                            "Email: " + this.EmailAddress + " " +
+                            "Status: " + this.EntityState.ToString();
+
+            return logString;
         }
 
         

@@ -1,9 +1,10 @@
 ﻿using Acme.Common;
+using Acme.Common.Interfaces;
 using System;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         private string _productName;
 
@@ -59,6 +60,16 @@ namespace ACM.BL
             isValid = CurrentPrice.HasValue;
 
             return isValid;
+        }
+
+        public string Log()
+        {
+            var logString = this.ProductId + ": " +
+                            this.ProductName + " " +
+                            "Detail: " + this.ProductDescription + " " +
+                            "Status: " + this.EntityState.ToString();
+
+            return logString;
         }
 
         
